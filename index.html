@@ -1,0 +1,54 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Psychic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+  <h1>The Psychic Game</h1>
+  <h2>Guess what letter Im thinking of</h2>
+
+  <p id="wins"></p>
+  <p id="losses"></p>
+  <p id="guesses left"></p>
+  <p id="Your guesses so far"></p>
+
+  <div>
+    <p id="userchoice-text"></p>
+    <p id="computerchoice-text"></p>
+  </div>
+
+  <!-- array of all comp choices -->
+  <script src="assets/javascript/game.js">
+    var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T",
+      "U", "V", "W", "X", "Y", "Z",
+    ];
+
+    // function for the key press
+    document.onkeyup = function (e) {
+      // determines what key was pressed (hopefully lol)
+      var userguess = event.key;
+      // now we have to give the comp the ability to guess a random letter
+      var computerGuess = computerChoices[Math.floor(Math.random() * letters.length)];
+      // run code if any letter key is pressed
+      if (userguess === letters)
+        // allert comp and user
+        alert("user guess" + userguess);
+      alert("comuter guess" + computerGuess);
+
+
+    }
+  </script>
+
+
+
+
+
+</body>
+
+</html>
